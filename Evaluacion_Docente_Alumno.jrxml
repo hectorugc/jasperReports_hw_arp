@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Evaluacion_Docente_Alumno" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eecffc22-f384-40ef-bd03-9179859067d2">
+	<property name="ireport.zoom" value="1.1000000000000025"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="New Dataset 1" uuid="7583fcec-8fe5-4fe2-a346-8164d1d9c855">
+		<parameter name="id_institucion" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_cuatrimestre" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_anio" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_alumno" class="java.lang.String">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_profesor" class="java.lang.Long"/>
+		<queryString>
+			<![CDATA[Select distinct ccpeda.descripcion_pregunta,creda.respuesta from operation.evaluacion_docente_alumno_detalle oedad
+full outer join catalog.cat_preguntas_evaluacion_docente_alumno ccpeda on oedad.pregunta = ccpeda.id_pregunta and oedad.id_cuatrimestre = ccpeda.id_cuatrimestre and oedad.id_anio = ccpeda.id_anio and oedad.id_institucion = ccpeda.id_institucion
+full outer join catalog.cat_respuestas_evaluacion_docente_alumno creda on oedad.respuesta = creda.id_respuesta and oedad.id_institucion = creda.id_institucion and oedad.pregunta = creda.id_pregunta and oedad.id_cuatrimestre = creda.id_cuatrimestre and oedad.id_anio = creda.id_anio
+where oedad.id_institucion = $P{id_institucion} and
+	 oedad.id_anio = $P{id_anio} and
+	 oedad.id_cuatrimestre = $P{id_cuatrimestre} and
+	 oedad.id_alumno = $P{id_alumno} and
+	oedad.id_profesor = $P{id_profesor}]]>
+		</queryString>
+		<field name="descripcion_pregunta" class="java.lang.String"/>
+		<field name="respuesta" class="java.lang.String"/>
+		<group name="descripcion_pregunta">
+			<groupExpression><![CDATA[$F{descripcion_pregunta}]]></groupExpression>
+		</group>
+		<group name="respuesta">
+			<groupExpression><![CDATA[$F{respuesta}]]></groupExpression>
+		</group>
+	</subDataset>
+	<parameter name="id_institucion" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_anio" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_cuatrimestre" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_alumno" class="java.lang.String"/>
+	<parameter name="id_profesor" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select  concat_ws(' ',al.nombre,al.app,al.apm) alumno ,concat_ws(' ',
+prof.nombre,prof.app,prof.apm) profesor,
+oedad.id_anio, cuati.descripcion
+--cpeda.descripcion_pregunta,
+--creda.respuesta
+from operation.evaluacion_docente_alumno_detalle oedad
+full outer join catalog.cat_preguntas_evaluacion_docente_alumno cpeda  on oedad.pregunta = cpeda.id_pregunta
+full outer join catalog.cat_respuestas_evaluacion_docente_alumno creda on oedad.respuesta = creda.id_pregunta
+full outer join entity.alumnos al on oedad.id_alumno = al.id_alumno
+full outer join entity.profesores prof on oedad.id_profesor = prof.id_profesor
+full outer join catalog.cat_cuatrimestre cuati on oedad.id_cuatrimestre = cuati.id_cuatrimestre
+where
+	oedad.id_institucion=1 and
+	oedad.id_institucion=$P{id_institucion} and
+    oedad.id_anio=$P{id_anio} and
+    oedad.id_cuatrimestre=$P{id_cuatrimestre} and
+    oedad.id_profesor=$P{id_profesor} and
+	oedad.id_alumno=$P{id_alumno}
+limit 1]]>
+	</queryString>
+	<field name="alumno" class="java.lang.String"/>
+	<field name="profesor" class="java.lang.String"/>
+	<field name="id_anio" class="java.lang.Long"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="25" y="0" width="114" height="79" uuid="1766ab64-bd7b-4add-84e9-78aa6f16d408"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/7f083086-d74d-4f3b-b338-cd5f417c05cc"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="139" y="13" width="527" height="32" uuid="fd2cdd35-7532-4464-a885-9175d8908a0e"/>
+				<textElement textAlignment="Justified">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD TECNOLÓGICA EL RETOÑO ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="649" y="-21" width="153" height="100" uuid="323c3f95-3d15-473e-8c19-d52377e34e79"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/7876bed7-954c-4768-89fb-98fcd69d6bbf"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="148" y="45" width="449" height="21" forecolor="#FFFFFF" backcolor="#0066CC" uuid="e48f23bc-853e-4567-b17c-a143b3d3dbcf"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Evaluación de Docente por Alumno]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="466" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 9" style="table 9" x="0" y="142" width="788" height="140" uuid="aa40363d-5ea1-4c9f-8c1d-7b4f48ad75a7"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="New Dataset 1" uuid="80fd1b6c-b588-4e8a-9a47-ce0eb7c1373d">
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_alumno">
+							<datasetParameterExpression><![CDATA[$P{id_alumno}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_profesor">
+							<datasetParameterExpression><![CDATA[$P{id_profesor}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="466" uuid="d80e7039-c281-4c5b-afe5-942ea8fb282b">
+						<jr:detailCell style="table 9_TD" height="29" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="466" height="29" uuid="91fd4975-3c69-4c05-a530-bc1f7370bdea"/>
+								<textFieldExpression><![CDATA[$F{descripcion_pregunta}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="314" uuid="4688b69b-e55c-4798-b8a0-1d9397b7a884">
+						<jr:detailCell style="table 9_TD" height="29" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="314" height="29" uuid="3ee1ff09-363a-4a82-b148-4b52246e6555"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{respuesta}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement mode="Opaque" x="423" y="11" width="34" height="19" forecolor="#FFFFFF" backcolor="#0066CC" uuid="8cefa119-2a06-4ce4-afd5-d1b44b2656bb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Año:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="173" y="41" width="164" height="19" uuid="f7c149ab-7408-42e5-9a11-59f5997028c6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="12" width="164" height="18" uuid="7f7994ba-b2b0-4db8-b768-1785917c0d83"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{profesor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="11" y="42" width="162" height="19" forecolor="#FFFFFF" backcolor="#0066CC" uuid="d3cbf8f3-e620-472b-8aba-f58458b8b5fe"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Alumno:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="456" y="11" width="130" height="20" uuid="046bb103-654d-4bdb-8e77-94d484d9a511"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_anio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="11" y="11" width="162" height="18" forecolor="#FFFFFF" backcolor="#0066CC" uuid="b4e80a11-f2f4-4110-bf9a-a9e2432b097d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Maestro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="423" y="42" width="51" height="19" forecolor="#FFFFFF" backcolor="#0066CC" uuid="7a7061d5-d001-4ac1-ba5a-bb9649a37127"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Justified">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periodo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="473" y="41" width="130" height="20" uuid="25e39b02-a4b5-48bc-bf71-b396d3f46e67"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="2" y="94" width="466" height="34" forecolor="#FFFFFF" backcolor="#0066CC" uuid="e2ccd278-c6e9-4ffd-bdd5-a1cec9987e41"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pregunta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="471" y="94" width="314" height="34" forecolor="#FFFFFF" backcolor="#0066CC" uuid="b915e088-bcbe-4728-b8d2-2532e3cd87cb"/>
+				<box topPadding="3" leftPadding="3" bottomPadding="3" rightPadding="3">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Respuesta]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

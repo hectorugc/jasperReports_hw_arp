@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="carta_acptacion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="774ee890-c5e0-4907-93bb-fe7b15e539f2">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id_anio" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="aspirante_examen" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_institucion" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select  concat_ws(' ',ea.nombre,ea.apellido_paterno,ea.apellido_materno) aspirante
+,pp.carrera,(nombre_carrera) as carrera_nombre
+from operation.examen_vocacional_detalle oevd
+full outer join entity.aspirante ea on oevd.aspirante_examen = ea.folio
+left JOIN entity.aspirante pp  ON oevd.aspirante_examen = ea.folio
+left join catalog.cat_carreras ccc  on  ccc.id_carrera = ea.carrera
+where
+    oevd.id_anio=$P{id_anio} and
+	oevd.aspirante_examen=$P{aspirante_examen} and
+	oevd.id_institucion=$P{id_institucion}
+limit 1]]>
+	</queryString>
+	<field name="aspirante" class="java.lang.String"/>
+	<field name="carrera" class="java.lang.String"/>
+	<field name="carrera_nombre" class="java.lang.String"/>
+	<variable name="variable1" class="java.lang.String">
+		<variableExpression><![CDATA[($F{carrera} ==("TSU-F") ? "Mechatronics Automation Area" :
+(
+$F{carrera}==("TSU-L") ? "Multi-platform Software Development " :
+(
+$F{carrera}==("TSU-I") ? "Mechatronics Manufacture Fexible Systems Area" :
+(
+$F{carrera}==("TSU-K")  ? "English Language" :
+(
+$F{carrera}==("TSU-D")   ? "Administration Human Resources Area" :
+(
+$F{carrera}==("TSU-J") ? "Business Development Marketing Area" :
+(
+$F{carrera}==("TSU-E") ? "Digital Design Animation Area" : ""
+)))))))]]></variableExpression>
+	</variable>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="555" height="775" uuid="429553a4-a916-4e02-9096-f2d92f6d912c"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/add40208-13d2-4020-b969-5f08b73c72a4"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<detail>
+		<band height="706" splitType="Stretch">
+			<staticText>
+				<reportElement x="179" y="177" width="197" height="12" uuid="2bc6ebd1-2edb-449e-9750-4742ea3f0343"/>
+				<text><![CDATA[Congratulations On Your Admission]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="189" width="219" height="16" uuid="b1292519-1879-4f9e-a20c-177ea68bb8e5"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[To Universidad Tecnológica el Retoño]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="210" width="520" height="43" uuid="214cc5bf-b6f9-4bd9-9170-a55f8935ea10"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[This letter confirms that you have been accepted to the program list above as a member of the Class 2021,you will join a dynamic student community in a place of endeless opportunities.UTR offers an unparelled setting for the next chapter of your life as a bilingual professional.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="253" width="520" height="43" uuid="711e7ef3-a59e-4af4-9371-d6a214687ef1"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Your response to the offer of admission and matriculation fee must be sumbited before Agust 7th,2020.In anticipation of the questions you may have, we have enclosed the “Final Rerquirements” document with information explanig details of your admission and enrollment.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="296" width="520" height="31" uuid="75364cb1-309b-441b-8742-81af9b804800"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[If we may provide additional information, please let us know. I wish to extend you a warm welcome and best wishes for your success at this bilingual, international and sustainable University.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="130" width="536" height="20" uuid="2a2672d4-5302-4ad6-98fc-44e30d99ceac"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aspirante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="153" width="537" height="20" uuid="d8d4a451-c247-4bc9-8fd5-7b8ed7ec5ef9"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{variable1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="329" width="62" height="14" uuid="8c47097f-80ec-4edc-a8a4-c2c1a3aceb6a"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Sincerely,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="350" width="162" height="14" uuid="3b4ba6be-cfa9-43ef-9b8c-d2ffd019d3fa"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Emmanuel Carrillo Martínez]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="364" width="162" height="14" uuid="a94fe835-e85b-46ec-a041-4d5bd44e8d34"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[UTR President]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="399" width="555" height="20" uuid="09dca1cd-883f-4a7d-ad0a-70f49a4da158"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aspirante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="422" width="555" height="20" uuid="574b67f8-8fba-41a9-a1fe-fc10e47f3013"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{carrera_nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="114" y="448" width="326" height="12" uuid="c444d261-338e-4ab7-ad72-f4a415c21fab"/>
+				<text><![CDATA[¡Has sido admitido en la Universidad Tecnológica El Retoño ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="465" width="520" height="51" uuid="bae5d1f3-9933-4685-811f-3d741d68c749"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Esta carta confirma que has sido aceptado en el Programa Educativo que solicitaste. Como miembro de la Generacion 2021, te unirás a una comunidad estudiantil muy dinámica en un lugar lleno de oprtunidades. La UTR te ofrece un marco incomparable para que vivas el siguiente capítulo d tu vida como profesional bilingue.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="516" width="522" height="52" uuid="9eb4611c-f57d-48bc-8501-dfc80bd289e5"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Tu respuesta de admisión, pago de inscripción y colegiatura deberá ser realizado a más tardar el 7 de agosto de 2020. Anticipándonos a las preguntas que puedas tener, incluimos en este correo el documento “Requisitos finales” con información que explica los detalles de tu
+ admision y pagos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="568" width="522" height="52" uuid="7bc0a8e0-fbc0-4dd0-ad84-94f90c9f50c5"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Si tienes más dudas, por favor comunícate al 500 04 10 y con gusto te ayudaremos a resolverlas. Te extiendo una cálida bienvenida y mis mejores deseos para que seas un estudiente exitoso en esta Universiad Bilingue,Intenacional y Sustentable.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="631" width="81" height="14" uuid="04d5ea8b-c32e-472d-b328-f2c7111cb808"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Atentamente,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="653" width="162" height="14" uuid="1d280e26-6409-4b22-8380-e08dad7951c2"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Emmanuel Carrillo Martínez]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="667" width="162" height="14" uuid="395778fe-1cf3-42e4-b6dc-34c70c0ad49d"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1"/>
+				<text><![CDATA[Rector UTR]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

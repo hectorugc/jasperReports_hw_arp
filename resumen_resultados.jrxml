@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="resumen_resultados" pageWidth="1224" pageHeight="792" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="1184" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3b9f9f3e-8740-4c30-906a-1a18c4c8c813">
+	<property name="ireport.zoom" value="0.7513148009015777"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="5bddb7e5-37f6-4fa2-87c1-6d47c10488b7">
+		<queryString>
+			<![CDATA[select distinct ea.folio, ea.carrera,(nombre_carrera) as carrera_nombre,to_char(oea.fecha,'DD-MM-YYYY') fecha_aspirante, ea.nombre, ea.apellido_paterno, ea.apellido_materno, ea.correo, ea.promedio, ea.prepa,
+((ea.promedio * 20) / 10) promedio_prepa,
+(((select cast(count(respuesta_correcta) AS DOUBLE PRECISION)  from operation.examen_aspirante_detalle where id_carrera =ea.carrera  and aspirante_examen= oea.aspirante_examen and respuesta_correcta is true) * 60)  / (select count(*) from catalog.cat_preguntas_admision where id_carrera = ea.carrera)) promedio_22,
+--(select count(valor_respuesta) from operation.examen_vocacional_detalle where aspirante_examen=oea.aspirante_examen) respuesta_1,
+
+(select case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+          when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 97
+           when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 95
+           when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 90
+            when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 80
+           when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 70
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 65
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 55
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 40
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 2 and cpav.sub_seccion='Ac' and (ea2.carrera = 'TSU-L' or ea2.carrera = 'TSU-F' or ea2.carrera = 'TSU-I')
+       ) percentil_cientificotec_ac,
+     (select case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+          when ( (sum(oevd2.valor_respuesta) between 10 and 10)) then 97
+           when ( (sum(oevd2.valor_respuesta) between 9 and 9)) then 90
+           when ( (sum(oevd2.valor_respuesta) between 8 and 8)) then 85
+           when ( (sum(oevd2.valor_respuesta) between 7 and 7)) then 80
+           when ( (sum(oevd2.valor_respuesta) between 6 and 6)) then 70
+            when ( (sum(oevd2.valor_respuesta) between 5 and 5)) then 60
+           when ( (sum(oevd2.valor_respuesta) between 4 and 4)) then 50
+           when ( (sum(oevd2.valor_respuesta) between 3 and 3)) then 40
+           when ( (sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+           when ( (sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ( (sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_cientificotec_pr
+ from operation.examen_vocacional_detalle oevd2
+ LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen and
+    cpav.id_seccion = 2 and cpav.sub_seccion='Pr' and (ea2.carrera = 'TSU-L' or ea2.carrera = 'TSU-F' or ea2.carrera = 'TSU-I'))percentil_cientificotec_pr,
+--lengua inglesa
+  (select case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+           when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 97
+           when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 95
+            when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 90
+            when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 80
+      when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 65
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 55
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 40
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 6 and cpav.sub_seccion='Ac' and ea2.carrera = 'TSU-K'
+       ) percentil_psico_ac,
+    (select     case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+          when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 97
+          when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 90
+           when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 85
+           when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 80
+           when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 70
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 60
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 50
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 40
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_psico_pr
+ from operation.examen_vocacional_detalle oevd2
+ LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen and
+    cpav.id_seccion = 6 and cpav.sub_seccion='Pr' and ea2.carrera = 'TSU-K') percentil_psico_pr,
+--lengua inglesa
+
+-- AACH
+
+(select case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+           when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 98
+           when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 96
+            when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 95
+            when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 85
+            when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 80
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 70
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 55
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 45
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 35
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 8 and cpav.sub_seccion='Ac' and ea2.carrera = 'TSU-D'
+       ) percentil_empresa_ac,
+    (select     case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+          when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 98
+           when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 95
+           when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 90
+           when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 85
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 75
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 65
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 55
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 45
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 30
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_empresa_pr
+ from operation.examen_vocacional_detalle oevd2
+LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen and
+    cpav.id_seccion = 8 and cpav.sub_seccion='Pr' and ea2.carrera = 'TSU-D'),
+-- DNAM
+(select case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+           when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 98
+           when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 95
+            when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 90
+            when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 85
+            when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 75
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 60
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 50
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 35
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 25
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 10
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+       left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 9 and cpav.sub_seccion='Ac' and ea2.carrera = 'TSU-J'
+       ) percentil_persuasivo_ac,
+     (select case when ((sum(oevd2.valor_respuesta) between 11 and 12)) then 99
+          when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 97
+          when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 95
+           when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 90
+           when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 85
+           when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 75
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 65
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 55
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 45
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_persuasivo_pr
+ from operation.examen_vocacional_detalle oevd2
+ LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen and
+    cpav.id_seccion = 9 and cpav.sub_seccion='Pr' and ea2.carrera = 'TSU-J'),
+-- DDAA
+(select case when ((sum(oevd2.valor_respuesta) between 12 and 12)) then 98
+        when ((sum(oevd2.valor_respuesta) between 11 and 11)) then 97
+        when ((sum(oevd2.valor_respuesta) between 10 and 10)) then 95
+        when ((sum(oevd2.valor_respuesta) between 9 and 9)) then 90
+        when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 85
+         when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 75
+         when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 65
+          when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 60
+         when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 50
+         when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 40
+         when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+         when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 12
+         when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+     else 0
+     end
+       from operation.examen_vocacional_detalle oevd2
+       LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+       left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 14 and cpav.sub_seccion='Ac' and ea2.carrera = 'TSU-E'
+       ) percentil_plastico_ac,
+     (select case when ((sum(oevd2.valor_respuesta) between 12 and 12)) then 99
+            when ((sum(oevd2.valor_respuesta) between 11 and 11)) then 95
+            when ((sum(oevd2.valor_respuesta) between 9 and 10)) then 90
+            when ((sum(oevd2.valor_respuesta) between 8 and 8)) then 85
+            when ((sum(oevd2.valor_respuesta) between 7 and 7)) then 75
+            when ((sum(oevd2.valor_respuesta) between 6 and 6)) then 70
+            when ((sum(oevd2.valor_respuesta) between 5 and 5)) then 60
+           when ((sum(oevd2.valor_respuesta) between 4 and 4)) then 50
+           when ((sum(oevd2.valor_respuesta) between 3 and 3)) then 40
+           when ((sum(oevd2.valor_respuesta) between 2 and 2)) then 30
+           when ((sum(oevd2.valor_respuesta) between 1 and 1)) then 20
+           when ((sum(oevd2.valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_plastico_pr
+ from operation.examen_vocacional_detalle oevd2
+LEFT OUTER JOIN operation.examen_vocacional oev on oevd2.id_institucion=oev.id_institucion and  oevd2.aspirante_examen=oev.aspirante_examen and  oevd2.id_anio=oev.id_anio
+left outer join entity.aspirante ea2 on oev.aspirante_examen= ea2.folio and oev.id_cuatrimestre=ea2.id_cuatrimestre and oev.id_anio=ea2.id_anio AND oev.id_institucion=ea2.id_institucion
+left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and oevd2.aspirante_examen=oea.aspirante_examen and
+    cpav.id_seccion = 14 and cpav.sub_seccion='Pr' and ea2.carrera = 'TSU-E')
+
+ from operation.examen_aspirante oea
+left outer join entity.aspirante  ea on oea.id_institucion = ea.id_institucion and oea.id_anio = ea.id_anio  and oea.aspirante_examen = ea.folio
+left outer  join operation.examen_aspirante_detalle oead on oead.id_institucion = oea.id_institucion and oead.id_anio = oea.id_anio and oead.aspirante_examen = oea.aspirante_examen
+left join catalog.cat_carreras ccc  on  ccc.id_carrera = ea.carrera
+order by ea.folio]]>
+		</queryString>
+		<field name="folio" class="java.lang.Long"/>
+		<field name="carrera" class="java.lang.String"/>
+		<field name="carrera_nombre" class="java.lang.String"/>
+		<field name="fecha_aspirante" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="apellido_paterno" class="java.lang.String"/>
+		<field name="apellido_materno" class="java.lang.String"/>
+		<field name="correo" class="java.lang.String"/>
+		<field name="promedio" class="java.math.BigDecimal"/>
+		<field name="prepa" class="java.lang.Long"/>
+		<field name="promedio_prepa" class="java.math.BigDecimal"/>
+		<field name="promedio_22" class="java.lang.Double"/>
+		<field name="percentil_cientificotec_ac" class="java.lang.Integer"/>
+		<field name="percentil_cientificotec_pr" class="java.lang.Integer"/>
+		<field name="percentil_psico_ac" class="java.lang.Integer"/>
+		<field name="percentil_psico_pr" class="java.lang.Integer"/>
+		<field name="percentil_empresa_ac" class="java.lang.Integer"/>
+		<field name="percentil_empresa_pr" class="java.lang.Integer"/>
+		<field name="percentil_persuasivo_ac" class="java.lang.Integer"/>
+		<field name="percentil_persuasivo_pr" class="java.lang.Integer"/>
+		<field name="percentil_plastico_ac" class="java.lang.Integer"/>
+		<field name="percentil_plastico_pr" class="java.lang.Integer"/>
+	</subDataset>
+	<subDataset name="Table Dataset 2" uuid="48e7b6d1-21ac-4b68-b1f9-61b5b7e0b2a0">
+		<queryString>
+			<![CDATA[select distinct ea.folio, ea.carrera,to_char(oea.fecha,'DD-MM-YYYY') fecha_aspirante, ea.nombre, ea.apellido_paterno, ea.apellido_materno, ea.correo, ea.promedio, ea.prepa,
+((ea.promedio * 20) / 10) promedio_prepa,
+(((select count(*) from operation.examen_aspirante_detalle where id_carrera =ea.carrera  and aspirante_examen= oea.aspirante_examen and respuesta_correcta is true) * 60) / (select count(*) from catalog.cat_preguntas_admision where id_carrera = ea.carrera)) promedio_22,
+
+(select count(valor_respuesta) from operation.examen_vocacional_detalle where aspirante_examen=oea.aspirante_examen) respuesta_1,
+
+(select case when ((sum(valor_respuesta) between 11 and 12)) then 99
+          when ((sum(valor_respuesta) between 10 and 10)) then 97
+           when ((sum(valor_respuesta) between 9 and 9)) then 95
+           when ((sum(valor_respuesta) between 8 and 8)) then 90
+            when ((sum(valor_respuesta) between 7 and 7)) then 80
+           when ((sum(valor_respuesta) between 6 and 6)) then 70
+            when ((sum(valor_respuesta) between 5 and 5)) then 65
+           when ((sum(valor_respuesta) between 4 and 4)) then 55
+           when ((sum(valor_respuesta) between 3 and 3)) then 40
+           when ((sum(valor_respuesta) between 2 and 2)) then 30
+           when ((sum(valor_respuesta) between 1 and 1)) then 20
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 2 and cpav.sub_seccion='Ac'
+       ) percentil_cientificotec_ac,
+	   (select case when ((sum(valor_respuesta) between 11 and 12)) then 99
+          when ( (sum(valor_respuesta) between 10 and 10)) then 97
+           when ( (sum(valor_respuesta) between 9 and 9)) then 90
+           when ( (sum(valor_respuesta) between 8 and 8)) then 85
+           when ( (sum(valor_respuesta) between 7 and 7)) then 80
+           when ( (sum(valor_respuesta) between 6 and 6)) then 70
+            when ( (sum(valor_respuesta) between 5 and 5)) then 60
+           when ( (sum(valor_respuesta) between 4 and 4)) then 50
+           when ( (sum(valor_respuesta) between 3 and 3)) then 40
+           when ( (sum(valor_respuesta) between 2 and 2)) then 30
+           when ( (sum(valor_respuesta) between 1 and 1)) then 20
+           when ( (sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_cientificotec_pr
+ from operation.examen_vocacional_detalle oevd2
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen and
+		cpav.id_seccion = 2 and cpav.sub_seccion='Pr'),
+--lengua inglesa
+	(select case when ((sum(valor_respuesta) between 11 and 12)) then 99
+           when ((sum(valor_respuesta) between 10 and 10)) then 97
+           when ((sum(valor_respuesta) between 9 and 9)) then 95
+            when ((sum(valor_respuesta) between 8 and 8)) then 90
+            when ((sum(valor_respuesta) between 6 and 6)) then 80
+ 			when ((sum(valor_respuesta) between 5 and 5)) then 65
+           when ((sum(valor_respuesta) between 4 and 4)) then 55
+           when ((sum(valor_respuesta) between 3 and 3)) then 40
+           when ((sum(valor_respuesta) between 2 and 2)) then 30
+           when ((sum(valor_respuesta) between 1 and 1)) then 20
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 6 and cpav.sub_seccion='Ac'
+       ) percentil_psico_ac,
+	  (select     case when ((sum(valor_respuesta) between 11 and 12)) then 99
+          when ((sum(valor_respuesta) between 10 and 10)) then 97
+          when ((sum(valor_respuesta) between 9 and 9)) then 90
+           when ((sum(valor_respuesta) between 8 and 8)) then 85
+           when ((sum(valor_respuesta) between 7 and 7)) then 80
+           when ((sum(valor_respuesta) between 6 and 6)) then 70
+            when ((sum(valor_respuesta) between 5 and 5)) then 60
+           when ((sum(valor_respuesta) between 4 and 4)) then 50
+           when ((sum(valor_respuesta) between 3 and 3)) then 40
+           when ((sum(valor_respuesta) between 2 and 2)) then 30
+           when ((sum(valor_respuesta) between 1 and 1)) then 20
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_psico_pr
+ from operation.examen_vocacional_detalle oevd2
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen and
+		cpav.id_seccion = 6 and cpav.sub_seccion='Pr'),
+--lengua inglesa
+
+-- AACH
+
+(select case when ((sum(valor_respuesta) between 11 and 12)) then 99
+           when ((sum(valor_respuesta) between 10 and 10)) then 98
+           when ((sum(valor_respuesta) between 9 and 9)) then 96
+            when ((sum(valor_respuesta) between 8 and 8)) then 95
+            when ((sum(valor_respuesta) between 7 and 7)) then 85
+            when ((sum(valor_respuesta) between 6 and 6)) then 80
+ 			      when ((sum(valor_respuesta) between 5 and 5)) then 70
+           when ((sum(valor_respuesta) between 4 and 4)) then 55
+           when ((sum(valor_respuesta) between 3 and 3)) then 45
+           when ((sum(valor_respuesta) between 2 and 2)) then 35
+           when ((sum(valor_respuesta) between 1 and 1)) then 20
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 8 and cpav.sub_seccion='Ac'
+       ) percentil_empresa_ac,
+	  (select     case when ((sum(valor_respuesta) between 11 and 12)) then 99
+          when ((sum(valor_respuesta) between 9 and 9)) then 98
+           when ((sum(valor_respuesta) between 8 and 8)) then 95
+           when ((sum(valor_respuesta) between 7 and 7)) then 90
+           when ((sum(valor_respuesta) between 6 and 6)) then 85
+            when ((sum(valor_respuesta) between 5 and 5)) then 75
+           when ((sum(valor_respuesta) between 4 and 4)) then 65
+           when ((sum(valor_respuesta) between 3 and 3)) then 55
+           when ((sum(valor_respuesta) between 2 and 2)) then 45
+           when ((sum(valor_respuesta) between 1 and 1)) then 30
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_empresa_pr
+ from operation.examen_vocacional_detalle oevd2
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen and
+		cpav.id_seccion = 8 and cpav.sub_seccion='Pr'),
+-- DNAM
+(select case when ((sum(valor_respuesta) between 11 and 12)) then 99
+           when ((sum(valor_respuesta) between 10 and 10)) then 98
+           when ((sum(valor_respuesta) between 9 and 9)) then 95
+            when ((sum(valor_respuesta) between 8 and 8)) then 90
+            when ((sum(valor_respuesta) between 7 and 7)) then 85
+            when ((sum(valor_respuesta) between 6 and 6)) then 75
+ 			      when ((sum(valor_respuesta) between 5 and 5)) then 60
+           when ((sum(valor_respuesta) between 4 and 4)) then 50
+           when ((sum(valor_respuesta) between 3 and 3)) then 35
+           when ((sum(valor_respuesta) between 2 and 2)) then 25
+           when ((sum(valor_respuesta) between 1 and 1)) then 10
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end
+       from operation.examen_vocacional_detalle oevd2
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 9 and cpav.sub_seccion='Ac'
+       ) percentil_persuasivo_ac,
+	   (select case when ((sum(valor_respuesta) between 11 and 12)) then 99
+          when ((sum(valor_respuesta) between 10 and 10)) then 97
+          when ((sum(valor_respuesta) between 9 and 9)) then 95
+           when ((sum(valor_respuesta) between 8 and 8)) then 90
+           when ((sum(valor_respuesta) between 7 and 7)) then 85
+           when ((sum(valor_respuesta) between 6 and 6)) then 75
+            when ((sum(valor_respuesta) between 5 and 5)) then 65
+           when ((sum(valor_respuesta) between 4 and 4)) then 55
+           when ((sum(valor_respuesta) between 3 and 3)) then 45
+           when ((sum(valor_respuesta) between 2 and 2)) then 30
+           when ((sum(valor_respuesta) between 1 and 1)) then 20
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_persuasivo_pr
+ from operation.examen_vocacional_detalle oevd2
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen and
+		cpav.id_seccion = 9 and cpav.sub_seccion='Pr'),
+-- DDAA
+(select case when ((sum(valor_respuesta) between 12 and 12)) then 98
+        when ((sum(valor_respuesta) between 11 and 11)) then 97
+        when ((sum(valor_respuesta) between 10 and 10)) then 95
+        when ((sum(valor_respuesta) between 9 and 9)) then 90
+        when ((sum(valor_respuesta) between 8 and 8)) then 85
+         when ((sum(valor_respuesta) between 7 and 7)) then 75
+         when ((sum(valor_respuesta) between 6 and 6)) then 65
+          when ((sum(valor_respuesta) between 5 and 5)) then 60
+         when ((sum(valor_respuesta) between 4 and 4)) then 50
+         when ((sum(valor_respuesta) between 3 and 3)) then 40
+         when ((sum(valor_respuesta) between 2 and 2)) then 30
+         when ((sum(valor_respuesta) between 1 and 1)) then 12
+         when ((sum(valor_respuesta) between 0 and 0)) then 1
+     else 0
+     end
+       from operation.examen_vocacional_detalle oevd2
+       left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+       where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen
+       and cpav.id_seccion = 14 and cpav.sub_seccion='Ac'
+       ) percentil_plastico_ac,
+	   (select case when ((sum(valor_respuesta) between 12 and 12)) then 99
+            when ((sum(valor_respuesta) between 11 and 11)) then 95
+            when ((sum(valor_respuesta) between 9 and 10)) then 90
+            when ((sum(valor_respuesta) between 8 and 8)) then 85
+            when ((sum(valor_respuesta) between 7 and 7)) then 75
+            when ((sum(valor_respuesta) between 6 and 6)) then 70
+            when ((sum(valor_respuesta) between 5 and 5)) then 60
+           when ((sum(valor_respuesta) between 4 and 4)) then 50
+           when ((sum(valor_respuesta) between 3 and 3)) then 40
+           when ((sum(valor_respuesta) between 2 and 2)) then 30
+           when ((sum(valor_respuesta) between 1 and 1)) then 20
+           when ((sum(valor_respuesta) between 0 and 0)) then 1
+       else 0
+       end percentil_plastico_pr
+ from operation.examen_vocacional_detalle oevd2
+ left outer join catalog.cat_preguntas_admision_vocacional  cpav on oevd2.id_institucion = cpav.id_institucion and   oevd2.id_anio = cpav.id_anio and  oevd2.id_pregunta = cpav.id_pregunta
+ where cpav.id_institucion = oea.id_institucion and cpav.id_anio = oea.id_anio and aspirante_examen=oea.aspirante_examen and
+		cpav.id_seccion = 14 and cpav.sub_seccion='Pr')
+
+ from operation.examen_aspirante oea
+left outer join entity.aspirante  ea on oea.id_institucion = ea.id_institucion and oea.id_anio = ea.id_anio  and oea.aspirante_examen = ea.folio
+left outer  join operation.examen_aspirante_detalle oead on oead.id_institucion = oea.id_institucion and oead.id_anio = oea.id_anio and oead.aspirante_examen = oea.aspirante_examen
+
+order by ea.folio]]>
+		</queryString>
+		<field name="folio" class="java.lang.Long"/>
+		<field name="carrera" class="java.lang.String"/>
+		<field name="fecha_aspirante" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="apellido_paterno" class="java.lang.String"/>
+		<field name="apellido_materno" class="java.lang.String"/>
+		<field name="correo" class="java.lang.String"/>
+		<field name="promedio" class="java.math.BigDecimal"/>
+		<field name="prepa" class="java.lang.Long"/>
+		<field name="promedio_prepa" class="java.math.BigDecimal"/>
+		<field name="promedio_22" class="java.lang.Long"/>
+		<field name="respuesta_1" class="java.lang.Long"/>
+		<field name="percentil_cientificotec_ac" class="java.lang.Integer"/>
+		<field name="percentil_cientificotec_pr" class="java.lang.Integer"/>
+		<field name="percentil_psico_ac" class="java.lang.Integer"/>
+		<field name="percentil_psico_pr" class="java.lang.Integer"/>
+		<field name="percentil_empresa_ac" class="java.lang.Integer"/>
+		<field name="percentil_empresa_pr" class="java.lang.Integer"/>
+		<field name="percentil_persuasivo_ac" class="java.lang.Integer"/>
+		<field name="percentil_persuasivo_pr" class="java.lang.Integer"/>
+		<field name="percentil_plastico_ac" class="java.lang.Integer"/>
+		<field name="percentil_plastico_pr" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="id_anio" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_cuatrimestre" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="folio" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_institucion" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *
+
+ from operation.examen_aspirante oea
+
+limit 1]]>
+	</queryString>
+	<field name="id_institucion" class="java.lang.Long"/>
+	<field name="id_anio" class="java.lang.Long"/>
+	<field name="aspirante_examen" class="java.lang.Long"/>
+	<field name="tipo_examen" class="java.lang.Long"/>
+	<field name="fecha" class="java.sql.Timestamp"/>
+	<field name="puntaje" class="java.lang.Long"/>
+	<field name="promedio_carrera" class="java.lang.Double"/>
+	<field name="id_cuatrimestre" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="87" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="167" height="80" uuid="b1201057-1f67-4fa3-8786-b7b69106f824"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/251f4780-b9a4-4227-94f6-138056989d9f"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="454" y="0" width="345" height="26" uuid="d387f737-5712-4c1e-a2cb-9b167a87d880"/>
+				<textElement verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universidad Tecnológica el Retoño]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="422" y="26" width="424" height="22" uuid="df6329ac-f46d-4b61-baa8-a05f35c27785"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Resumen Resultados de Examén de Admisión]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="99" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="0" y="45" width="1184" height="20" uuid="c7e306ee-8904-4fdb-a55d-95eca8cf74fd"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1" uuid="aeb338b3-66db-4cc9-89f8-d01350020fd3"/>
+					<jr:column width="43" uuid="6071dcc0-d9b9-43bc-a702-f20701a09cb8">
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="43" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="19f705ed-5e5e-4158-a3e5-3ef1c4d8e1de"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[FOLIO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="43" height="11" uuid="ce347372-bfda-486d-94f5-6672112bdbad"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{folio}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="95" uuid="5da0df59-ed6e-40d4-8309-3448bce68461">
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="95" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="d737a7ed-947b-4d1a-a983-5522773d1f98"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[CARRERA]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="95" height="11" uuid="f916d60c-4af9-4188-9902-2b204548e3b2"/>
+								<textElement verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{carrera_nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="61eb070e-6c89-4c22-86e9-71d931ab6f22">
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="69bb058d-fb5d-46d5-b5ee-22d3fe59ef73"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[FECHA EXAMEN]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="11" uuid="d1f357b5-3937-4cac-8130-3f94274753a5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{fecha_aspirante}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="136" uuid="cbc9aa25-6e74-4239-bb49-adc71336aeed">
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="136" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="17683609-da00-4cca-86cf-934a4b855420"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NOMBRE COMPLETO ]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="136" height="11" uuid="5a8d8072-52aa-4a51-a00e-8bb8817464ff"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="9e07fce6-ec4e-44c2-a9c4-64bfa266d1bf">
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="120" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="3a2955d6-eb17-4a99-9d27-98f0fd2cdbd0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[APELLIDO PATERNO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="120" height="11" uuid="c9db92a3-f514-4e40-aee1-5a97774aa57c"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{apellido_paterno}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="273c5f6d-161a-4cc4-aa03-74a3a41bccd1">
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="120" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="85e72d91-9894-4c94-8c4b-7ca426623248"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[APELLIDO MATERNO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="120" height="11" uuid="a5f77698-0963-43ac-8dec-103d3086a01a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{apellido_materno}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="653ff0ab-697f-4669-88dd-7db24a0cfaae">
+						<jr:tableFooter height="0" rowSpan="1"/>
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="120" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="5f50f78c-aeaa-46e5-9cf3-15bd651b4755"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[E-MAIL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="120" height="11" uuid="1314c63f-dcc5-4483-9a3a-c6ea7d66932a"/>
+								<textElement textAlignment="Center" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:columnGroup width="150" uuid="281b6d06-e57d-45a7-b212-be32885f3c2d">
+						<jr:column width="60" uuid="af990504-481f-465e-b3ae-e03051a91c10">
+							<jr:columnHeader height="25" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="60" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="20553219-275f-47b9-961f-55892de9acf4"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="8" isBold="true"/>
+									</textElement>
+									<text><![CDATA[Promedio de preparatoria ]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="table_TD" height="11" rowSpan="1">
+								<textField pattern="###0.00" isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="60" height="11" uuid="23f67c0e-da25-419e-a433-2ac507c5e073"/>
+									<textElement textAlignment="Center" markup="none">
+										<font size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{promedio_prepa}]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+						<jr:column width="90" uuid="b78d1f54-fdad-4b2e-ad8b-5245429434ed">
+							<jr:columnHeader height="25" rowSpan="1">
+								<staticText>
+									<reportElement mode="Opaque" x="0" y="0" width="90" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="0c7bd306-9eab-4ddc-a7d6-0917f3b20a50"/>
+									<textElement textAlignment="Center" verticalAlignment="Middle">
+										<font size="8" isBold="true"/>
+									</textElement>
+									<text><![CDATA[Promedio examen de especialidad]]></text>
+								</staticText>
+							</jr:columnHeader>
+							<jr:detailCell style="table_TD" height="11" rowSpan="1">
+								<textField pattern="###0.00;-###0.00" isBlankWhenNull="true">
+									<reportElement x="0" y="0" width="90" height="11" uuid="5c70447c-e4ca-456a-bd0d-851114fb6ffa"/>
+									<textElement textAlignment="Center" markup="none">
+										<font size="8"/>
+									</textElement>
+									<textFieldExpression><![CDATA[$F{promedio_22}.floatValue()]]></textFieldExpression>
+								</textField>
+							</jr:detailCell>
+						</jr:column>
+					</jr:columnGroup>
+					<jr:column width="90" uuid="a93baf65-d9e0-49ac-9a4e-f8882ed96e0d">
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="eaac1a30-83a7-4717-8a26-0a57ace57554"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[promedio I.P.P]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField pattern="###0.00;-###0.00" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="11" uuid="7e17090f-dfbb-4688-ac5b-dee40ed337a7"/>
+								<textElement textAlignment="Center" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{carrera}.equals("TSU-I") || $F{carrera}.equals("TSU-L") || $F{carrera}.equals("TSU-F") &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) >= 0 &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) <= 25
+?  "5" : ($F{carrera}.equals("TSU-I") || $F{carrera}.equals("TSU-L") || $F{carrera}.equals("TSU-F") &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) > 25 &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) <= 50
+? "10" : ($F{carrera}.equals("TSU-I") || $F{carrera}.equals("TSU-L") || $F{carrera}.equals("TSU-F") &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) >50 &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) <= 75 ? "15" : (
+$F{carrera}.equals("TSU-I") || $F{carrera}.equals("TSU-L") || $F{carrera}.equals("TSU-F") &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) >75 &&
+(($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2) <= 100 ? "20" :(
+$F{carrera}.equals("TSU-K") &&  (($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2) >= 0 &&
+(($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2)  <= 25
+ ?   "5" : ($F{carrera}.equals("TSU-K") &&  (($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2) > 25 &&
+(($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2)  <= 50
+ ?   "10" : ($F{carrera}.equals("TSU-K") &&  (($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2) >50 &&
+(($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2)  <= 75
+ ?   "15" : ($F{carrera}.equals("TSU-K") &&  (($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2) >75 &&
+(($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2)  <= 100
+ ?   "20" : ($F{carrera}.equals("TSU-D") &&  (($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) >= 0 &&
+(($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) <=25 ? "5" :($F{carrera}.equals("TSU-D") &&  (($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) >25 &&
+(($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) <=50 ? "10" :($F{carrera}.equals("TSU-D") &&  (($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) >50 &&
+(($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) <=75 ? "15" :($F{carrera}.equals("TSU-D") &&  (($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) > 75 &&
+(($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) <=100 ? "20" :($F{carrera}.equals("TSU-J") && (($F{percentil_persuasivo_ac}.floatValue()+$F{percentil_persuasivo_pr}.floatValue())/2) >= 0 &&
+(($F{percentil_persuasivo_ac}.floatValue()+$F{percentil_persuasivo_pr}.floatValue())/2) <=25 ? "5"  :($F{carrera}.equals("TSU-J") && (($F{percentil_persuasivo_ac}.floatValue()+$F{percentil_persuasivo_pr}.floatValue())/2) >25 &&
+(($F{percentil_persuasivo_ac}.floatValue()+$F{percentil_persuasivo_pr}.floatValue())/2) <=50 ? "10"  :($F{carrera}.equals("TSU-E") ? (($F{percentil_plastico_ac}.floatValue()+$F{percentil_plastico_pr}.floatValue())/2) : ""
+)))))))))))))))]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d8126ca6-b4af-40b9-92ab-39da96a7c74b">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="a8a14b3c-c686-4741-a614-460306b798e2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[PROMEDIO TOTAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField pattern="###0.00;-###0.00" isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="11" uuid="315b5c08-d6e0-44be-865b-bc83bb7f1587"/>
+								<textElement textAlignment="Center" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{carrera}.equals("TSU-I") || $F{carrera}.equals("TSU-L") || $F{carrera}.equals("TSU-F") ? ($F{promedio_prepa}.floatValue() + ($F{promedio_22}.floatValue() + (($F{percentil_cientificotec_ac}.floatValue()+ $F{percentil_cientificotec_pr}.floatValue())/2)*.2 )):
+(
+$F{carrera}.equals("TSU-K")  ?($F{promedio_prepa}.floatValue()  + ($F{promedio_22}.floatValue() + (($F{percentil_psico_ac}.floatValue()+$F{percentil_psico_pr}.floatValue())/2) *.2)):
+(
+$F{carrera}.equals("TSU-D")   ?($F{promedio_prepa}.floatValue() +  ($F{promedio_22}.floatValue() + (($F{percentil_empresa_pr}.floatValue()+$F{percentil_empresa_ac}.floatValue())/2) *.2)):
+(
+$F{carrera}.equals("TSU-J")?($F{promedio_prepa}.floatValue()    + ($F{promedio_22}.floatValue() + (($F{percentil_persuasivo_ac}.floatValue()+$F{percentil_persuasivo_pr}.floatValue())/2) *.2)):
+(
+$F{carrera}.equals("TSU-E") ?($F{promedio_prepa}.floatValue()   + ($F{promedio_22}.floatValue() + (($F{percentil_plastico_ac}.floatValue()+$F{percentil_plastico_pr}.floatValue())/2) *.2)) : ""
+)))))]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e9f3df63-55ac-4fee-b590-658dd985ef66">
+						<jr:tableHeader height="0" rowSpan="1"/>
+						<jr:columnHeader height="25" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="25" forecolor="#FEFEFE" backcolor="#C00000" uuid="b328eb3a-d8fb-4849-a7c9-545b9e18f9c1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[STATUS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="11" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="11" uuid="f2c0f5ce-f655-4d32-a169-095030480f05"/>
+								<textElement textAlignment="Center" markup="none">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[(($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_cientificotec_ac}.intValue()+$F{percentil_cientificotec_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-L")) ||
+ (($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_cientificotec_ac}.intValue()+$F{percentil_cientificotec_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-I")) ||
+ (($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_cientificotec_ac}.intValue()+$F{percentil_cientificotec_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-F")) ||
+  (($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_psico_ac}.intValue()+$F{percentil_psico_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-K")) || (($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_empresa_ac}.intValue()+$F{percentil_empresa_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-D")) ||  (($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_persuasivo_ac}.intValue()+$F{percentil_persuasivo_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-J")) || (($F{promedio_prepa}.floatValue() + $F{promedio_22}.floatValue() +($F{percentil_plastico_ac}.intValue()+$F{percentil_plastico_pr}.intValue())/2*.2)
+ >= 70 && $F{carrera}.equals("TSU-E")) ? "ACEPTADO" : "RECHAZADO"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

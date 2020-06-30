@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporte_status_evaluacion-docente" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce0c587e-c90a-4b0e-99cf-279a1c641f92">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="bb3f4a86-1de7-4044-8735-973d321714e9">
+		<parameter name="id_anio" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_institucion" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_cuatrimestre" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT  distinct
+ROW_NUMBER() OVER(ORDER BY oeda.alumno ASC) AS num,
+concat_ws(' ', al.nombre,al.app,al.apm) alumno,(alumno)alumnoID ,oeda.status
+FROM operation.evaluacion_docente_alumno oeda
+full outer join entity.alumnos al on oeda.alumno = al.id_alumno
+WHERE
+    oeda.id_institucion= $P{id_institucion}  and
+    oeda.id_cuatrimestre= $P{id_cuatrimestre} and
+    oeda.id_anio = $P{id_anio} and status = true
+ group by
+ oeda.alumno,al.nombre,al.app,al.apm , oeda.status
+order by alumnoID]]>
+		</queryString>
+		<field name="num" class="java.lang.Long"/>
+		<field name="alumno" class="java.lang.String"/>
+		<field name="alumnoid" class="java.lang.String"/>
+		<field name="status" class="java.lang.Boolean"/>
+	</subDataset>
+	<subDataset name="contador" uuid="2f02392d-1dc7-45bb-b696-497604e56dfb">
+		<parameter name="id_institucion" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_anio" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_cuatrimestre" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[SELECT COUNT(distinct alumno) as terminados,
+(SELECT COUNT(distinct id_alumno) FROM entity.alumno_tutor where  id_cuatrimestre=2 and
+id_anio=2020 and id_institucion=1 ) totales
+
+from operation.evaluacion_docente_alumno oes where  id_cuatrimestre=2 and
+id_anio=2020  and id_institucion=1 and status is true]]>
+		</queryString>
+		<field name="terminados" class="java.lang.Long"/>
+		<field name="totales" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="id_anio" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_institucion" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_cuatrimestre" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from
+operation.evaluacion_docente_alumno
+where
+ id_anio = $P{id_anio} and id_cuatrimestre = $P{id_cuatrimestre} and id_institucion = $P{id_institucion}
+limit 1]]>
+	</queryString>
+	<field name="id_institucion" class="java.lang.Long"/>
+	<field name="id_anio" class="java.lang.Long"/>
+	<field name="id_cuatrimestre" class="java.lang.Long"/>
+	<field name="id_profesor" class="java.lang.Long"/>
+	<field name="fecha_registro_evaluacion" class="java.sql.Timestamp"/>
+	<field name="observaciones_evaluacion" class="java.lang.String"/>
+	<field name="usuario" class="java.lang.Long"/>
+	<field name="puntaje" class="java.math.BigDecimal"/>
+	<field name="calificacion" class="java.math.BigDecimal"/>
+	<field name="alumno" class="java.lang.String"/>
+	<field name="status" class="java.lang.Boolean"/>
+	<title>
+		<band height="128" splitType="Stretch">
+			<staticText>
+				<reportElement x="134" y="13" width="509" height="43" uuid="6899712f-f8c3-4082-98f9-a2341ab31ad4"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD TECNOLÓGICA EL RETOÑO ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="139" height="93" uuid="47513743-f90d-49c0-9a20-21eaad701d2f"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/7f083086-d74d-4f3b-b338-cd5f417c05cc"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="645" y="0" width="151" height="98" uuid="04baecc9-1ce7-48f9-88d2-84c9133a57b1"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/7876bed7-954c-4768-89fb-98fcd69d6bbf"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="119" y="51" width="507" height="43" uuid="49659b3a-d47f-46f6-9272-08ab8a55f364"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[ Reporte de Estatus de Evaluacion Docente por Alumno]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="215" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 3" style="table 3" x="206" y="65" width="292" height="20" uuid="58acf7af-94c7-4e66-ad78-75b4209febd5"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table Dataset 1" uuid="0f0030c4-3135-4f2b-b7ec-969e8b00d797">
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="90" uuid="9cb67d5c-8903-4c95-96f8-e50d8c98597b">
+						<jr:tableHeader style="table 3_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="20" backcolor="#FF001A" uuid="fc08a3b2-8306-423f-bb66-c61542f9f1ab"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8" isBold="true"/>
+								</textElement>
+								<text><![CDATA[#]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 3_TD" height="10" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="10" uuid="94f75dd8-b729-410c-82a7-5becbd0acc33"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ed604c34-2eb7-41c3-9cc1-8b39ed35be02">
+						<jr:tableHeader style="table 3_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="20" backcolor="#FF001A" uuid="d6a8ae0b-ea4c-47fe-b43e-d8ba4cd7f8e2"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[ID ALUMNO]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 3_TD" height="10" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="10" uuid="4cadfeab-a617-48a3-8f85-7275e2a217dd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{alumnoid}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="163" uuid="79e3d411-3fe9-4611-acee-5aafc661cfb4">
+						<jr:tableHeader style="table 3_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="163" height="20" backcolor="#FF001A" uuid="60adaf1f-9411-44d7-b097-b96d384dc868"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[NOMBRE]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 3_TD" height="10" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="163" height="10" uuid="ca9cdb37-0e9e-429c-986b-d2ae1266ca68"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{alumno}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 4" style="table 4" x="206" y="14" width="270" height="20" uuid="1cefb304-f2cc-4781-8a69-320cb344ada6"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="contador" uuid="1616d9aa-b312-46d0-a04c-297510b7ae5f">
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="90" uuid="6f116e25-e946-48cb-b6a3-60b8d23098ed">
+						<jr:columnHeader style="table 3_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="90" height="20" backcolor="#FF001A" uuid="9e0c471b-1196-48ab-a2a4-2fb028f4b112"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[TOTAL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 4_TD" height="10" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="10" uuid="fd6d96c5-af76-4fa8-b93e-d5c3873cc9e9"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{totales}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="126" uuid="08897da1-83b2-4ff4-ab74-f9f1f2190916">
+						<jr:columnHeader style="table 3_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="126" height="20" backcolor="#FF001A" uuid="750b4d90-72b2-4bde-abb0-bf475f130096"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[POR TERMINAR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 4_TD" height="10" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="126" height="10" uuid="f76a5bba-c438-4d15-bfd4-6eaa1bb319fa"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{totales}.intValue()-$F{terminados}.intValue()]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="112" uuid="1b03165e-7fd3-4e02-8601-0c3d86834b86">
+						<jr:columnHeader style="table 3_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement mode="Opaque" x="0" y="0" width="112" height="20" backcolor="#FF001A" uuid="96f6a428-1ad5-4cca-bcd2-b9f97cd2e3e6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[FINALIZADOS]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 4_TD" height="10" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="112" height="10" uuid="52575de8-d2b6-4eb2-a91b-7e74787e3d53"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{terminados}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

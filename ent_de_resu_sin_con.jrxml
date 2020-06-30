@@ -1,0 +1,2131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="entrega_de_resultados_alumnos_sin_concluir" language="groovy" pageWidth="841" pageHeight="595" columnWidth="801" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2bac3e2e-175e-4b63-9659-7e554be4867c">
+	<property name="ireport.zoom" value="4.0"/>
+	<property name="ireport.x" value="599"/>
+	<property name="ireport.y" value="1248"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 4_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 5_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 6_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 7_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 8_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 9_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 10_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 11_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 12_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 13_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 14_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 15_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 16_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 17">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 17_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 17_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 17_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 18">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 18_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 18_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 18_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="registros_totales" uuid="413ed6ef-c319-4309-93d2-f9f97b0e17d3">
+		<parameter name="id_cuatrimestre" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_anio" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_institucion" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[--DNAM
+SELECT COUNT(folio) as totalTotales,
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and duplicado is null) sumaDNAM,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) DNAM,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) DNAM_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) DNAM_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) DNAM_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) DNAM_SIN_FECHA,
+--AACH
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaAACH,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) AACH ,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) AACH_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) AACH_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) AACH_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) AACH_SIN_FECHA,
+--DDAA
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaDDAA,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) DDAA,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) DDAA_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) DDAA_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) DDAA_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) DDAA_SIN_FECHA,
+--LI
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaLI,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null)  LI,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null)  LI_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null)  LI_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null)  LI_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) LI_SIN_FECHA,
+--MTAA
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaMTAA,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null)  MTAA ,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null)  MTAA_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null)  MTAA_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null)  MTAA_f4,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) MTAA_SIN_FECHA,
+--MTSF
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaMTSF,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) MTSF,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) MTSF_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) MTSF_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) MTSF_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) MTSF_SIN_FECHA,
+--DSM
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaDSM,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null)DSM ,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null)DSM_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null)DSM_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null)DSM_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is null  and duplicado is null) DSM_SIN_FECHA,
+--TISM
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio}  and duplicado is null) sumaTISM,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null)TISM ,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null)TISM_f2,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null)TISM_f3,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null)TISM_f4,
+(SELECT COUNT(carrera) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen is  null  and duplicado is null) TISM_SIN_FECHA,
+--sin cargar foto de comprobante, but rechazada
+(SELECT COUNT(carrera) FROM entity.aspirante where id_institucion=$P{id_institucion}
+ and id_cuatrimestre=$P{id_cuatrimestre}
+   and id_anio=$P{id_anio}
+and status is false  and duplicado is null) carga_rechazada_de_foto,
+--sin cargar foto de comprobante, but sin rechazar
+(SELECT COUNT(carrera) FROM entity.aspirante where id_institucion=$P{id_institucion}
+ and id_cuatrimestre=$P{id_cuatrimestre}
+   and id_anio=$P{id_anio}
+and status is null  and duplicado is null ) carga_null_de_foto
+
+FROM entity.aspirante ea
+ where ea.id_institucion=$P{id_institucion}
+ and ea.id_cuatrimestre=$P{id_cuatrimestre}
+   and ea.id_anio=$P{id_anio}
+	 and duplicado is null
+and (ea.fecha_examen is  null or ea.fecha_examen is not null)
+GROUP BY ea.id_cuatrimestre,ea.id_anio]]>
+		</queryString>
+		<field name="totaltotales" class="java.lang.Long"/>
+		<field name="sumadnam" class="java.lang.Long"/>
+		<field name="dnam" class="java.lang.Long"/>
+		<field name="dnam_f2" class="java.lang.Long"/>
+		<field name="dnam_f3" class="java.lang.Long"/>
+		<field name="dnam_f4" class="java.lang.Long"/>
+		<field name="dnam_sin_fecha" class="java.lang.Long"/>
+		<field name="sumaaach" class="java.lang.Long"/>
+		<field name="aach" class="java.lang.Long"/>
+		<field name="aach_f2" class="java.lang.Long"/>
+		<field name="aach_f3" class="java.lang.Long"/>
+		<field name="aach_f4" class="java.lang.Long"/>
+		<field name="aach_sin_fecha" class="java.lang.Long"/>
+		<field name="sumaddaa" class="java.lang.Long"/>
+		<field name="ddaa" class="java.lang.Long"/>
+		<field name="ddaa_f2" class="java.lang.Long"/>
+		<field name="ddaa_f3" class="java.lang.Long"/>
+		<field name="ddaa_f4" class="java.lang.Long"/>
+		<field name="ddaa_sin_fecha" class="java.lang.Long"/>
+		<field name="sumali" class="java.lang.Long"/>
+		<field name="li" class="java.lang.Long"/>
+		<field name="li_f2" class="java.lang.Long"/>
+		<field name="li_f3" class="java.lang.Long"/>
+		<field name="li_f4" class="java.lang.Long"/>
+		<field name="li_sin_fecha" class="java.lang.Long"/>
+		<field name="sumamtaa" class="java.lang.Long"/>
+		<field name="mtaa" class="java.lang.Long"/>
+		<field name="mtaa_f2" class="java.lang.Long"/>
+		<field name="mtaa_f3" class="java.lang.Long"/>
+		<field name="mtaa_f4" class="java.lang.Long"/>
+		<field name="mtaa_sin_fecha" class="java.lang.Long"/>
+		<field name="sumamtsf" class="java.lang.Long"/>
+		<field name="mtsf" class="java.lang.Long"/>
+		<field name="mtsf_f2" class="java.lang.Long"/>
+		<field name="mtsf_f3" class="java.lang.Long"/>
+		<field name="mtsf_f4" class="java.lang.Long"/>
+		<field name="mtsf_sin_fecha" class="java.lang.Long"/>
+		<field name="sumadsm" class="java.lang.Long"/>
+		<field name="dsm" class="java.lang.Long"/>
+		<field name="dsm_f2" class="java.lang.Long"/>
+		<field name="dsm_f3" class="java.lang.Long"/>
+		<field name="dsm_f4" class="java.lang.Long"/>
+		<field name="dsm_sin_fecha" class="java.lang.Long"/>
+		<field name="sumatism" class="java.lang.Long"/>
+		<field name="tism" class="java.lang.Long"/>
+		<field name="tism_f2" class="java.lang.Long"/>
+		<field name="tism_f3" class="java.lang.Long"/>
+		<field name="tism_f4" class="java.lang.Long"/>
+		<field name="tism_sin_fecha" class="java.lang.Long"/>
+		<field name="carga_rechazada_de_foto" class="java.lang.Long"/>
+		<field name="carga_null_de_foto" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="registros efectivos" uuid="074a59e2-a94b-4e87-873b-ca23749551c7">
+		<parameter name="id_cuatrimestre" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_anio" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<parameter name="id_institucion" class="java.lang.Long">
+			<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+		</parameter>
+		<queryString>
+			<![CDATA[--DNAM
+SELECT COUNT(folio) as totalesEfectivos ,
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaDNAMe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null )  DNAMe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null)  DNAM_F_2,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null)  DNAM_F_3,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-J'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null)  DNAM_F_4,
+--AACH
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaAACHe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null ) AACHe ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null ) AACH_F2 ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) AACH_F3 ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-D'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) AACH_F4 ,
+--DDAA
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaDDAAe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) DDAAe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) DDAA_F_2,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) DDAA_F_3,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-E'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) DDAA_F_4,
+--LI
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+and fecha_examen is not null  and duplicado is null) sumaLIe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) LIe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) LI_F_2,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) LI_F_3,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-K'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) LI_F_4,
+--MTAA
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaMTAAe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) MTAAe ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) MTAA_F_2 ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) MTAA_F_3 ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-F'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) MTAA_F_4 ,
+--MTSF
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaMTSFe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null ) MTSFe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) MTSF_F_2,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) MTSF_F_3,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-I'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) MTSF_F_4,
+--DSM
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaDSMe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null) DSMe ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null) DSM_F_2,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null) DSM_F_3,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-H'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null) DSM_F_4,
+--TISM
+(SELECT COUNT (folio) from entity.aspirante WHERE carrera='TSU-L'   and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and status=true
+  and fecha_examen is not null  and duplicado is null) sumaTISMe,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=1  and duplicado is null)TISMe ,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=2  and duplicado is null)TISMf2,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=3  and duplicado is null)TISMf3,
+(SELECT COUNT(folio) FROM entity.aspirante WHERE carrera='TSU-L'  and id_cuatrimestre=$P{id_cuatrimestre} and
+id_anio=$P{id_anio} and fecha_examen=4  and duplicado is null)TISMf4
+FROM entity.aspirante ea
+
+ where ea.id_institucion=$P{id_institucion}
+ and ea.id_cuatrimestre=$P{id_cuatrimestre}
+   and ea.id_anio=$P{id_anio}
+   and ea.status=true
+ and duplicado is null
+  and ea.fecha_examen is not null
+GROUP BY ea.id_cuatrimestre,ea.id_anio]]>
+		</queryString>
+		<field name="totalesefectivos" class="java.lang.Long"/>
+		<field name="sumadname" class="java.lang.Long"/>
+		<field name="dname" class="java.lang.Long"/>
+		<field name="dnam_f_2" class="java.lang.Long"/>
+		<field name="dnam_f_3" class="java.lang.Long"/>
+		<field name="dnam_f_4" class="java.lang.Long"/>
+		<field name="sumaaache" class="java.lang.Long"/>
+		<field name="aache" class="java.lang.Long"/>
+		<field name="aach_f2" class="java.lang.Long"/>
+		<field name="aach_f3" class="java.lang.Long"/>
+		<field name="aach_f4" class="java.lang.Long"/>
+		<field name="sumaddaae" class="java.lang.Long"/>
+		<field name="ddaae" class="java.lang.Long"/>
+		<field name="ddaa_f_2" class="java.lang.Long"/>
+		<field name="ddaa_f_3" class="java.lang.Long"/>
+		<field name="ddaa_f_4" class="java.lang.Long"/>
+		<field name="sumalie" class="java.lang.Long"/>
+		<field name="lie" class="java.lang.Long"/>
+		<field name="li_f_2" class="java.lang.Long"/>
+		<field name="li_f_3" class="java.lang.Long"/>
+		<field name="li_f_4" class="java.lang.Long"/>
+		<field name="sumamtaae" class="java.lang.Long"/>
+		<field name="mtaae" class="java.lang.Long"/>
+		<field name="mtaa_f_2" class="java.lang.Long"/>
+		<field name="mtaa_f_3" class="java.lang.Long"/>
+		<field name="mtaa_f_4" class="java.lang.Long"/>
+		<field name="sumamtsfe" class="java.lang.Long"/>
+		<field name="mtsfe" class="java.lang.Long"/>
+		<field name="mtsf_f_2" class="java.lang.Long"/>
+		<field name="mtsf_f_3" class="java.lang.Long"/>
+		<field name="mtsf_f_4" class="java.lang.Long"/>
+		<field name="sumadsme" class="java.lang.Long"/>
+		<field name="dsme" class="java.lang.Long"/>
+		<field name="dsm_f_2" class="java.lang.Long"/>
+		<field name="dsm_f_3" class="java.lang.Long"/>
+		<field name="dsm_f_4" class="java.lang.Long"/>
+		<field name="sumatisme" class="java.lang.Long"/>
+		<field name="tisme" class="java.lang.Long"/>
+		<field name="tismf2" class="java.lang.Long"/>
+		<field name="tismf3" class="java.lang.Long"/>
+		<field name="tismf4" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="id_cuatrimestre" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_anio" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id_institucion" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM entity.aspirante
+limit 1]]>
+	</queryString>
+	<field name="id_institucion" class="java.lang.Long"/>
+	<field name="id_anio" class="java.lang.Long"/>
+	<field name="id_cuatrimestre" class="java.lang.Long"/>
+	<field name="folio" class="java.lang.Long"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="apellido_paterno" class="java.lang.String"/>
+	<field name="apellido_materno" class="java.lang.String"/>
+	<field name="curp" class="java.lang.String"/>
+	<field name="telefono" class="java.lang.Long"/>
+	<field name="correo" class="java.lang.String"/>
+	<field name="carrera" class="java.lang.String"/>
+	<field name="prepa" class="java.lang.Long"/>
+	<field name="promedio" class="java.math.BigDecimal"/>
+	<field name="fecha_examen" class="java.lang.Long"/>
+	<field name="status" class="java.lang.Boolean"/>
+	<field name="comprobacion_estudios" class="java.lang.Boolean"/>
+	<field name="no_social" class="java.lang.Boolean"/>
+	<field name="foto" class="java.lang.Boolean"/>
+	<field name="comprobante_domicilio" class="java.lang.Boolean"/>
+	<field name="ine" class="java.lang.Boolean"/>
+	<field name="seguimiento" class="java.lang.Long"/>
+	<field name="inscrito" class="java.lang.Boolean"/>
+	<field name="aceptado" class="java.lang.Boolean"/>
+	<field name="observacion" class="java.lang.String"/>
+	<field name="observacion_inscrito" class="java.lang.Long"/>
+	<field name="observaciones_cat" class="java.lang.String"/>
+	<field name="calle" class="java.lang.String"/>
+	<field name="num_ca" class="java.lang.Long"/>
+	<field name="cp" class="java.lang.Long"/>
+	<field name="fracc" class="java.lang.String"/>
+	<field name="colonia" class="java.lang.String"/>
+	<field name="municipio" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="prom" class="java.math.BigDecimal"/>
+	<field name="tutor" class="java.lang.String"/>
+	<field name="celtutor" class="java.lang.Long"/>
+	<field name="otros" class="java.lang.String"/>
+	<field name="carga_pago" class="java.lang.Boolean"/>
+	<field name="observacion_pago" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<image>
+				<reportElement x="2" y="-1" width="111" height="98" uuid="d748a347-47bf-4338-9427-e306360ae6c7"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/7f083086-d74d-4f3b-b338-cd5f417c05cc"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="113" y="25" width="526" height="29" uuid="85342513-a623-4173-b4b0-dc506883fb7d"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD TECNOLÓGICA EL RETOÑO ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="639" y="-1" width="164" height="98" uuid="fc35fa01-a1bd-4ee0-bdf6-5468f687daaa"/>
+				<imageExpression><![CDATA["http://54.212.248.221:8090/v1.0/admin/projects/ARP/images/7876bed7-954c-4768-89fb-98fcd69d6bbf"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="184" y="54" width="413" height="29" uuid="77b19b8b-288c-407b-8d7a-9f4c9915529a"/>
+				<textElement textAlignment="Center">
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte de Aspirantes sin Concluir]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="246" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="-1" y="77" width="734" height="19" uuid="f4c41834-c9a3-487d-a5fd-e73e530663fb"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="1c9699a0-461a-4e60-a7ac-51fc93db4466">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="99c2860e-6442-4501-83bf-25fae803ad39">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="f9cad9ec-0dbb-484c-b82e-1c80e241d117"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[27 de junio]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4e7d3a31-a324-4e54-b580-52901346eec1">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="40f13afa-35da-49dd-8de9-ca95e1f805cc"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a8d82916-aa9e-4019-a77d-6a6f9df1eda1">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="86c30fd5-f4a3-478b-bdca-26c36a8ba764"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2dd81aea-29aa-4d86-995e-3b08e57881b3">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="4c050b3a-c489-4f42-ac50-d356359e4d04"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ebd3c4e1-8f14-44bb-a272-0d9bb9856316">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="060983d4-3034-4e23-a55c-ff8ecd5b3b5d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e20cf304-1d93-4438-baa9-a0c9dfa51618">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="61716e38-ef9e-4fa4-8267-1f397f039436"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tism_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="9805b804-7014-4d0b-9f76-b09ecac29506">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="06563566-afc9-4911-9de7-ca03a6bbf403"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="3491f1f9-16d4-437a-94c9-1aa586e67713">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="6c9c25b7-0df6-4f4c-a50e-9535a9906fc3"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="-1" y="99" width="734" height="19" uuid="7660cc94-b116-4aed-9227-042af3930045"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="22c8c44c-aeec-4b24-927c-0e0d3b1c7409">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="2c0fd07a-5899-407f-a8f0-44eba378a1d0">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="ab3968c9-fbe3-4333-bbac-91827c89e1c4"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[18 de julio]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="73bc89ae-9b24-4606-b202-023cfba53595">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="5fbadaf5-c423-4e56-8010-381ea6b06115"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="cdccc648-0c0b-4b3f-856a-0d19a98a69dd">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="bf6fc2bf-2001-4061-ac41-9cf9ff05b29c"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ad5d8f63-28a8-4fcf-9413-ae0d9b7dc577">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="3709ffb0-a5b0-47e2-9106-d773a5857a0c"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2d7b57bb-da22-4962-83c8-978bb6e62126">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="5ac2f403-01b3-4b37-9281-496018cb9bf0"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="84f7d851-10d7-43d3-a425-edf837bdc853">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="399475b6-5a4a-48c8-87ba-4c9e47bb08ef"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tism_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ba1428a8-2eb1-43df-8415-9363b6252d7b">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="773fdd35-82f9-4545-a49c-e2329959efda"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d3a1b518-6548-4768-acbf-41416731168b">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="049121c6-ad84-4369-8169-bde7a3301347"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="-1" y="122" width="734" height="19" uuid="2cd2c3c8-a20e-4774-9d64-f8e462eb163e"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="7461a7e3-5f5b-473f-8a7b-771bde57283d">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="035fedf0-50df-4a88-8d1b-88075e1be49a">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="48244e8d-39dd-42dc-b238-004fc643320f"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[1 de agosto]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="25ed0dc9-efab-4355-8f22-334f107fb28e">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="cbec2db3-2734-4820-9c89-bfc1dc302b86"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="886e419f-aa11-4c24-b66f-8c017ad91a75">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="092bd7b7-45c4-4bc5-aace-ff0bd343344d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="830e1acb-e5fb-4eb1-9849-a714ea6c34fa">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="6b144dfc-f4bb-4cf4-9b75-14e6e65b6d51"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="bbcd1e90-ba55-46fe-8974-7f6dcdbe470d">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="00921b6c-bbff-42e6-ae64-1fe0a5e1b511"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="ddd79c46-aef9-4cfb-b950-a54403618c7b">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="5ecb2235-9d3f-4824-9e00-4ad4a4ec1e84"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tism_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="90d61988-93ee-49e7-b33a-3fc72adc4602">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="3fce2e06-a72b-49d8-af93-511cc5d86e20"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="9c20c94f-b8a0-44de-96c1-561d6e402644">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="2e273f37-3932-420c-b1f8-0e9da4c04fd7"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="0" y="171" width="735" height="19" uuid="f51b0049-c892-43ed-a933-8eb7f18a744c"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="ccb05e64-260f-4715-9902-4dbf38bdd69e">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="228126d9-6929-4763-9f8a-0b6ac20d32af">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="b678fd59-4501-4140-b9bf-8c25098bcb03"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Totales]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f9d49728-0555-4546-8cc8-09ad8c1483ce">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="f7a58c11-829a-4276-8d08-418fa83a124d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumadnam}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="5fcf688f-f711-4c02-b960-4b50cbcc3edf">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="4275e002-930d-4774-b233-352b1fd60774"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumaaach}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="178b7ad3-60a6-44a6-bc35-789cfe1c8669">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="254f9f52-5427-495d-98b7-1e558541ff64"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumamtaa}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="19cca839-e27a-45c5-97c9-9092df063e63">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="e835b65a-38e2-4bc7-b551-c9d6ad97fbb5"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumamtsf}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="dbf74498-f6cb-45cb-a901-9f2834c62106">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="2121548e-4010-46fe-8564-dd306df423ad"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumatism}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2ecffc43-014d-4e62-8376-323b91275f88">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="5d9ac958-f054-4cd2-86a4-890acac19337"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumali}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="1eb06764-cd02-47ef-b353-750861b05179">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="aa96964b-8e41-49eb-8671-2ea4600964ba"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumaddaa}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="-1" y="145" width="734" height="19" uuid="32321bd1-888c-4941-a0d2-16f24aa6cac2"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="5c097a0b-01e4-49eb-9204-94ca370fddc7">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="bf225e5d-b216-40da-b879-519326e74551">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="88b42501-b9f7-45bd-867b-f9db39c4ccdc"/>
+								<textElement textAlignment="Center">
+									<font size="7" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Sin Fecha de Examen]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="73c0ef8b-0a73-4229-872b-b6044a387b11">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="36e9f605-ccf6-4d90-833f-1e4200c84943"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="31f4202d-1015-4eb3-b0b8-c2f15edd62c7">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="ce691641-8a5d-4b43-abba-ee1c905a2897"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="40e6ae9e-7e47-46c3-9ebb-60555bfc5f5a">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="a1856512-d09f-45e5-87e3-d132a8e99736"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c9665dac-48a2-46f5-9294-d020b982601e">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="d3f11341-ad9b-4335-b68b-7661824c712a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4704bb55-39dc-411a-98b6-c42ea646e415">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="6944566f-a44d-4ce9-8d90-0980a41bf317"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tism_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="81d2e80a-1a22-4c3c-b5b5-67460c986ad0">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="4a22445f-e024-4aa1-8b8b-98b19e8b15eb"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="efef1eff-9606-48aa-851f-4a6281d85549">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="false">
+								<reportElement x="0" y="0" width="90" height="20" uuid="1c350d96-3af4-4484-abd7-06e64dfadd0a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_sin_fecha}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="0" y="26" width="733" height="50" uuid="afc2ff18-7be0-4d95-ba18-b5a5dee94ed0"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="4e30ab2a-6336-47af-9c29-9b48a2e74603">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="19de549c-0c1c-4699-8031-f20f71f9e619">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement mode="Transparent" x="0" y="0" width="103" height="30" backcolor="#FFFFFF" uuid="4b922e2e-6782-4446-924b-cd11fab409df"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fecha de Examen]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="25a1a15a-4954-49dc-8d02-461f373cd34a"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[23 de mayo]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="db48d20b-fcd8-4d86-bf6b-ff96b10bb40d">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="943d4bd6-1b04-4ec5-bf29-c1300c1b67d9"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[DNAM]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="94207ead-4727-4ec0-a417-3e0122a87f2f"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="52773350-b7eb-41b4-9912-aceeac0affc9">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="4f752cd7-0494-43a6-8e81-e502c41ca8c8"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[AACH]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="f9f68c25-6be8-4b73-8ca2-055710d9880b"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="9731dbe1-a738-4c70-b581-7d8660425f14">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="14e2346d-44e2-468f-afa9-99240200087b"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MTAA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="7496709b-3540-41c0-96cd-e67b11fe55b2"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="702ffe71-b5ed-4951-9ddb-6adbae1b2af1">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="f0fed196-f357-4f52-8738-31fef728edee"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MTMF]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="a11573d9-c7fc-4920-bffe-f10fb6d2f5d9"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="0a67f31b-47ab-4bcd-a622-a8f89d21cc15">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="c522dced-2272-4a4d-b2ac-4bf979d067f3"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TISM]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="a1b83a6b-da7c-4a65-b0d5-779ba5562869"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tism}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="eb9fd43b-aafe-418a-bed1-a0e20120a116">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="fcd1e071-4cec-417b-870a-1592c96d8a39"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[LI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="31da4eda-0391-407f-ab65-429e09f93bbb"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="560de32f-09f1-4e5e-8691-aba605082c33">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" backcolor="#FFFFFF" uuid="fdfd2d14-119c-4590-a2d5-a64023b6afb4"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[DDAA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="a9f1036e-114f-4077-8e9f-24a708d8d387"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 16" style="table 16" x="-1" y="217" width="101" height="20" uuid="0a9110c0-ceb4-4f6b-aa94-524826f5073b"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="9ddba2f5-598a-4dd2-961b-b999217458e0">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="101" uuid="df631ef3-f169-413f-91f7-d5f442b92562">
+						<jr:detailCell style="table 16_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="100" height="20" uuid="54076c02-19a9-4d24-a2f3-1b9c163ccbcb"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{totaltotales}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="0" y="197" width="100" height="20" uuid="61550036-7128-4c14-9e29-66f11ac4afd4"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[GRAN TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="190" height="20" uuid="4143330d-5222-4d79-a990-c9a0948aa6b7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[REGISTROS TOTALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="197" width="138" height="20" uuid="0b60d700-06f1-4239-a90a-447816061f79"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Cargó comprobante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="197" width="138" height="20" uuid="716c1614-b6a3-4da3-a147-68869a19d701"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Sin comprobante]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement key="table 16" style="table 16" x="102" y="217" width="138" height="20" uuid="ab884944-a3c0-48ed-b065-dd021f578b9c"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="a56f6c65-f104-46f9-86b2-129ff5eabe55">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="139" uuid="e11366f6-7645-4696-822f-4ec5598c7769">
+						<jr:detailCell style="table 16_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="138" height="20" uuid="aa18d2da-400c-46b5-b768-cbfa57418ffd"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{carga_rechazada_de_foto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 16" style="table 16" x="240" y="217" width="138" height="20" uuid="67a94c6b-68f0-424f-9118-5466e4316157"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros_totales" uuid="50aa878a-c839-4743-96dc-1907fc5c6ac3">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="139" uuid="301920ec-155f-407a-9d3a-a98b2d2486cd">
+						<jr:detailCell style="table 16_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="139" height="20" uuid="8a3a1e34-9de9-401f-aa67-fcfac1f01a6a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{carga_null_de_foto}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="208">
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="1" y="160" width="735" height="19" uuid="a8984c83-10e2-474f-8e08-66e7b9b0f67b"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros efectivos" uuid="8b502f39-27b3-4808-bd22-b0b2d2975e2c">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="894f1b8c-bbd4-4ab8-b66b-d5f41922011a">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="effafbdd-a40f-46a0-a8bd-b50bc11a6874"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Totales]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d33a5f31-8c86-40c3-9a47-7a51c1b8d38f">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="78d7a233-9fd6-4bb0-8f47-a88b040b541d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumadname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="28b93d12-cf97-4aaa-be9c-987f4ec61e22">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="e1e3ef20-3492-4bc9-8c38-8333fb6bad28"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumaaache}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e409f2e0-d4c1-4e03-b923-5385561d9503">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="c1681dfc-c029-429e-a5bd-b9b6fa017b06"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumamtaae}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="61f9d161-99d5-44ae-840c-32e0c012cfb7">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="1ab879f2-b985-4429-b48f-df18377c0d51"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumamtsfe}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="6ba7592f-a3a4-4672-b41b-96faae2d2181">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="ef540ee7-44cc-4c1b-8e5e-4d3226577b30"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumatisme}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c855aa3c-196b-4de3-acf2-163d30c899c1">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="bca39993-6396-4702-81dd-054ad3f13974"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumalie}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="25476093-b104-4698-911d-36d8faf0fcc1">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="342a9567-edb2-4a87-a502-ebca0194061a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{sumaddaae}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="1" y="116" width="734" height="19" uuid="bb86ebc8-ff51-4cc5-8f92-bf0040b27b98"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros efectivos" uuid="a594ec16-8ca9-44dc-bcf6-f5a033763e4f">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="0d0cce2c-4888-4e7a-87b1-4a68349ddc65">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="9e8746ed-845e-4c3a-9753-675fde0eb5f5"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[18 de julio]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="88d50ec0-3449-4316-9c69-a2eaec2768ae">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="128b1d03-665a-43d7-a7e7-b28e4b1ff6a5"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_f_3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4cd6f13f-1360-424c-9fae-8008f0b48064">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="94c10dc6-71c7-4042-aa9d-2322ce4b9ad8"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_f3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d601ac4d-214c-4a94-b5db-93c82763a147">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="c8163b79-1219-401f-923a-6408cf97fd0b"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_f_3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="39253857-7317-475d-860d-5e74e8cfa19e">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="e7e879c5-c22e-48dd-87ed-fdd8426dc00f"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_f_3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c443bab2-a0b4-4029-a281-932ff8888724">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="036c44a7-6ec9-4d79-a0eb-5db1305a50fd"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tismf3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2051cd63-e75b-47c1-be85-532c7f6eb39a">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="222f68ff-5090-45a5-93e1-d0ae8e894c3e"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_f_3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="63625e89-f097-4b8b-a90e-ce276392e9b6">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="108b6b92-26db-46e5-8104-0b53c0b37322"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_f_3}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="1" y="139" width="734" height="19" uuid="a6710c41-5df9-4288-8655-4cd4d8c6fb53"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros efectivos" uuid="717124ed-c6a0-441a-9b27-cbbb81bff53b">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="09bb36a2-fe17-4f9d-96f4-1a1084625e94">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="b199c49d-f1c3-45bd-b7ca-b0ef05cd8072"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[1 de agosto]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="a1e3914f-68f4-4b60-a753-ad701d4856ca">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="87dfa6d6-4ed6-4ece-bfb3-46f204beecfe"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_f_4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="db12a65e-ff07-4228-9f18-b74bf7baca09">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="5cd9702f-3192-49e4-87bc-47cb908d9b13"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_f4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="8c7c40c1-4a38-4000-a7fd-f28988cad2cf">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="f2f0cedf-cab3-4db5-848c-0fe553ea9fb3"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_f_4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e8282b57-8d0c-4685-8818-f882de60f620">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="580b0536-88c2-43f0-ae7d-777630b1f6b2"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_f_4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="cc761421-e88d-418c-8ca4-142b4c5325e8">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="4bf4d68a-bac2-4c07-9a25-2d0bf75f6a7b"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tismf4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="d453dd9e-c492-4c00-a281-584cb7e59559">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="335bb7d1-b2ba-49dd-b5f1-e833ad64064f"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_f_4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b8ef3491-8fbe-455e-ac73-bba40adfc666">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="ca0af671-6d23-4203-b3d8-e87afea82be8"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_f_4}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="1" y="94" width="734" height="19" uuid="fcca02ba-1543-46f4-96da-a37c63c1462d"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros efectivos" uuid="d70f5581-19ac-493e-9074-a92756b45915">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="90a2a60a-654d-4865-a950-d777c16c12b2">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="00a6cc34-4b3b-43eb-94f0-4acb9ebad769"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[27 de junio]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="073b87e4-b36a-45d9-a02b-a99e2aa467bd">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="8b50a6d4-598a-48d8-90d8-c2e23405c776"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dnam_f_2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="2fe1db79-9055-4844-a751-379effb29261">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="754b9c45-87c3-4bda-bf6d-d30def60232d"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aach_f2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c848d04d-f019-4826-a59c-4da65870e161">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="db62cd32-4608-4798-b650-d15dc1ec3cf1"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaa_f_2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f343db33-307b-4c3c-8da6-2a345adf941f">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="1a50895d-b6fc-4ca1-8fb2-a418195a76b7"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsf_f_2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="85926f5e-e4f4-4225-bec4-8ac6076b4ec1">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="5f44da4a-68d5-476e-9ae9-5e53ac3a48b4"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tismf2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="3cedfb19-4a8c-44db-883f-c85bbcf7a637">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="876ec215-feea-4866-876b-b25dbb8d8bb7"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{li_f_2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="87bdd0ab-e63b-4cbf-8e7d-e781c93b8174">
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="ee77db3f-e3a0-43cd-a6c3-53280434b5bb"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaa_f_2}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<componentElement>
+				<reportElement key="table 14" style="table 14" x="1" y="43" width="733" height="50" uuid="c6609554-8407-4615-b6ca-747452bfc60b"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros efectivos" uuid="fda562be-05d4-40d4-af65-80f1755e6977">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="103" uuid="7f14865e-6198-415d-975f-2cba3ea521a1">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="30" uuid="77e8fa7a-3d6f-45b1-886c-a1f4f3417de8"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[Fecha de Examen]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="103" height="20" uuid="224d5497-a4b5-4b3a-933a-8766083878db"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[23 de mayo]]></text>
+							</staticText>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="fbce8616-2481-4b53-9b97-ceaf31e130cb">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="4a1fde20-1a4a-45db-bea5-cb986f78fd4c"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[DNAM]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="f6837fa9-8ef2-438e-9c14-8062833a9ac0"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{dname}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="dd785b24-5be7-4e48-bf4c-931ec2124622">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="863f5956-bd2d-48da-ba4d-dd5b0bad7b03"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[AACH]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="c7dc452b-3593-4806-bb2b-dedcae99dbb6"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{aache}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="9374d352-31bd-4ea7-89b5-aed214861387">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="512a104b-4783-4e1d-9a74-4b12ace033c7"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MTAA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="7c033bc9-4f17-4ecc-9cd4-69a6a9cb7e81"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtaae}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="96f5e051-e8cf-46e5-9786-9c50a40c6702">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="79985102-93eb-4a4e-97a6-2731eea65982"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[MTMF]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="b4ffb157-0d7d-48e9-84e0-6cc1617cb390"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{mtsfe}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="1ef8cc89-b3ad-4855-b28b-e54e0c5cf644">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="308e1648-faf2-413d-a951-273c6d402af3"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[TISM]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="ef2d0337-4d1e-4bf2-a531-66458fd07740"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{tisme}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="265a57e6-d185-4764-8b17-8842e06d298f">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="be8cb720-4453-49ae-be7d-45f8ac8725fd"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[LI]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="cf8e5915-5582-415d-954d-901cf83f67a9"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{lie}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="0889e4b6-c84a-47b1-b9bb-b0f958d44ca7">
+						<jr:tableHeader style="table 14_TH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="f1e1a765-bf48-4ff4-8cd2-f897ba9fb758"/>
+								<textElement textAlignment="Center">
+									<font isBold="true"/>
+								</textElement>
+								<text><![CDATA[DDAA]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:detailCell style="table 14_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="90" height="20" uuid="a3b5151d-80a3-491e-b28c-770cec0fdced"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{ddaae}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="2" y="186" width="100" height="20" uuid="70291653-b1b1-41e0-bd0c-c516aa2cc6ab"/>
+				<box>
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[GRAN TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="12" width="190" height="29" uuid="79c487a9-e487-45c8-86ef-1082cf5b6858"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[REGISTROS EFECTIVOS]]></text>
+			</staticText>
+			<elementGroup/>
+			<componentElement>
+				<reportElement key="table 17" style="table 17" x="102" y="186" width="91" height="20" uuid="0182afeb-cbfa-4a2a-b16b-ac78b87e1dc0"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="registros efectivos" uuid="ba598a50-7347-4e18-a4ca-38674807d4a8">
+						<datasetParameter name="id_cuatrimestre">
+							<datasetParameterExpression><![CDATA[$P{id_cuatrimestre}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_anio">
+							<datasetParameterExpression><![CDATA[$P{id_anio}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="id_institucion">
+							<datasetParameterExpression><![CDATA[$P{id_institucion}]]></datasetParameterExpression>
+						</datasetParameter>
+					</datasetRun>
+					<jr:column width="92" uuid="18e89506-9115-4870-87fc-c1a185d9d1f7">
+						<jr:detailCell style="table 17_TD" height="20" rowSpan="1">
+							<textField isBlankWhenNull="true">
+								<reportElement x="0" y="0" width="91" height="20" uuid="84526ac5-2f61-4733-8a12-fb1bbdaef7cf"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{totalesefectivos}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>
